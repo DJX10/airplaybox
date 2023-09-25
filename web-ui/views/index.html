@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Now Playing</title>
+    <script>
+        const socket = new WebSocket(`ws://${location.hostname}:8888`);
+        console.log(location.hostname);
+        socket.addEventListener('open', function (event){
+
+        });
+        socket.addEventListener('message', txt => {
+            console.log(txt);
+            const data = JSON.parse(txt.data);
+            const el = document.createElement('span');
+            el.innerHTML = JSON.stringify(data);
+            document.querySelector('.recent-track__body').innerText = `${data.song} - ${data.artist} - ${data.album}`
+        })
+    </script>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+<div class="recent-track">
+    <div class="recent-track__icon">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="recent-track__body js-track">loading...</div>
+</div>
+
+</html>
