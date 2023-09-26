@@ -1,0 +1,12 @@
+[Unit]
+  Description=Set up the soundcards
+  After=pulseaudio.service
+
+[Service]
+  ExecStart=/home/prodesk/airplaybox/soundcardsetter.sh
+  Restart=no
+  WorkingDirectory=/home/prodesk/
+  User=root
+
+[Install]
+  WantedBy=multi-user.target

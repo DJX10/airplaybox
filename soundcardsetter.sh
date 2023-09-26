@@ -122,7 +122,7 @@ rm -f /etc/pulse/system.pa
 echo "load-module module-native-protocol-unix auth-anonymous=1" > /etc/pulse/system.pa
 echo "load-module module-alsa-sink device=hw:$BACKYARD_CARD_INDEX,0 sink_name=backyard" >> /etc/pulse/system.pa
 echo "load-module module-alsa-sink device=hw:$FRONTYARD_CARD_INDEX,0 sink_name=frontyard" >> /etc/pulse/system.pa
-echo "load-module module-alsa-sink device=hw:$INTEL_CARD_INDEX,0 sink_name=onboard" >> /etc/pulse/system.pa
+echo "load-module module-alsa-sink device=hw:$INTEL_CARD_INDEX,1 sink_name=onboard" >> /etc/pulse/system.pa
 echo "load-module module-alsa-sink device=hw:$DECK_CARD_INDEX,0 sink_name=deck" >> /etc/pulse/system.pa
 echo "load-module module-alsa-sink device=hw:$MASTERBR_CARD_INDEX,0 sink_name=masterbr" >> /etc/pulse/system.pa
 
