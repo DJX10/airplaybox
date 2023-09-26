@@ -5,7 +5,7 @@ const server = require('http').createServer(app)
 const mqtt = require('mqtt');
 const WebSocket = require('ws')
 
-const ROOT_TOPIC = "test/";
+const ROOT_TOPIC = "Living Room/";
 const MQTT_SERVER = "mqtt://localhost:1883";
 const MQTT_TOPICS = [ ROOT_TOPIC+"title", ROOT_TOPIC+"artist", ROOT_TOPIC+"album", ROOT_TOPIC+"play_end"];
 
