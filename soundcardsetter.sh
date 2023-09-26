@@ -127,4 +127,4 @@ echo "load-module module-alsa-sink device=hw:$DECK_CARD_INDEX,0 sink_name=deck" 
 echo "load-module module-alsa-sink device=hw:$MASTERBR_CARD_INDEX,0 sink_name=masterbr" >> /etc/pulse/system.pa
 
 systemctl restart pulseaudio
-docker restart "$(docker ps -q)"
+docker restart $(docker ps -a -q)
