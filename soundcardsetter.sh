@@ -128,3 +128,4 @@ echo "load-module module-alsa-sink device=hw:$MASTERBR_CARD_INDEX,0 sink_name=ma
 
 systemctl restart pulseaudio
 #docker restart $(docker ps -a -q)
+docker ps
